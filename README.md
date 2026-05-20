@@ -1,2 +1,2 @@
 # asoebifloow-platform
-AI-assisted event operations platform for RSVP automation, digital access cards, seating intelligence, QR check-in, and guest coordination workflows.
+AI-assisted RSVP and event payment workflow platform for guest registration, digital invitations, booking coordination, and event access workflows.
