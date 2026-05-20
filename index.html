@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Event Accessfloow Platform Demo &mdash; Event Operations Experience</title>
-<meta property="og:title" content="Event Accessfloow Platform Demo &mdash; Event Operations Experience">
+<title>Event Accessfloow Platform Demo &mdash; Event Demo Guestrations Experience</title>
+<meta property="og:title" content="Event Accessfloow Platform Demo &mdash; Event Demo Guestrations Experience">
 <meta property="og:description" content="Demo guest experience for event access bookings, RSVP tracking, payment confirmation, and event coordination.">
 <meta property="og:type" content="website">
 <style>
@@ -342,7 +342,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="priceblock">
 <div class="pblbl">Access Package</div>
 <div class="pbrow">
-  <div class="pbitem"><div class="pbval">&#8358;15,000</div><div class="pbsub">Per Guest</div></div>
+  <div class="pbitem"><div class="pbval">$50</div><div class="pbsub">Per Access Pass</div></div>
   <div class="pbdiv"></div>
   <div class="pbitem"><div class="pbval">Guest Pass</div><div class="pbsub">Digital Access</div></div>
   <div class="pbdiv"></div>
@@ -352,7 +352,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="cta-split">
 <div class="cta-split-title">&#8212; How would you like to participate? &#8212;</div>
 <div class="cta-two">
-  <button class="cta-aso" type="button" onclick="sv('vEvent Access')"><span class="cta-icon">&#129507;</span>Book Event Access</button>
+  <button class="cta-aso" type="button" onclick="sv('vEventAccess')"><span class="cta-icon">&#129507;</span>Reserve Access Pass</button>
   <button class="cta-rsvp" type="button" onclick="sv('vRSVP')"><span class="cta-icon">&#10003;</span>RSVP Only</button>
 </div>
 <div class="ctasub">Enquiries: Call / WhatsApp <strong>00000000000</strong></div>
@@ -361,10 +361,10 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="stap" onclick="secretTap()"></div>
 </div>
 </div>
-<div class="view" id="vEvent Access">
+<div class="view" id="vEventAccess">
 <div class="panel-g">
   <div class="gstrip"></div>
-  <div class="phdr-g"><h2>Book Event Access</h2><p>Event Accessfloow Demo Event &middot; September 12th 2026</p></div>
+  <div class="phdr-g"><h2>Reserve Access Pass</h2><p>Event Accessfloow Demo Event &middot; September 12th 2026</p></div>
   <div class="pbody">
 <div class="fsub-g">&mdash; Your Details &mdash;</div>
 <div class="ff"><label class="ffl ffl-req">Full Name</label><input type="text" id="aName" placeholder="Your full name" autocomplete="name" /></div>
@@ -379,7 +379,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
           <option value="Media Partners">Media Partners</option>
           <option value="Production Team">Production Team</option>
           <option value="Premium Guests">Premium Guests</option>
-          <option value="Operations Team">Operations Team</option>
+          <option value="Demo Guestrations Team">Demo Guestrations Team</option>
           <option value="Vendor Coordination">Vendor Coordination</option>
           <option value="General Guests">General Guests</option>
           <option value="Logistics Team">Logistics Team</option>
@@ -388,15 +388,15 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="err-msg" id="aGuestErr">Please select who invited you to continue.</div>
 </div>
 <div class="ff"><label class="ffl ffl-req">Phone Number</label><input type="tel" id="aPhone" placeholder="Your WhatsApp number" autocomplete="tel" /></div>
-<div class="ff"><label class="ffl ffl-req">Quantity</label>
+<div class="ff"><label class="ffl ffl-req">Access Passes</label>
   <select id="aQty" onchange="updTot()">
     <option value="" disabled selected>Select quantity</option>
-    <option value="1">1 piece</option><option value="2">2 pieces</option>
-    <option value="3">3 pieces</option><option value="4">4 pieces</option><option value="5">5 pieces</option>
+    <option value="1">1 pass</option><option value="2">2 passes</option>
+    <option value="3">3 passes</option><option value="4">4 passes</option><option value="5">5 passes</option>
   </select>
 </div>
-<div class="totrow"><span class="totlbl">Total Amount</span><span class="totval" id="aTotal">&#8358; &mdash;</span></div>
-<button class="sbtn-g" type="button" onclick="goAsoEbiPay()">Proceed to Payment &#8594;</button>
+<div class="totrow"><span class="totlbl">Total Amount</span><span class="totval" id="aTotal">$ —</span></div>
+<button class="sbtn-g" type="button" onclick="goAsoEbiPay()">Reserve Access Pass &#8594;</button>
 <div class="blnk"><button type="button" onclick="sv('vLanding')">&larr; Back</button></div>
   </div>
   <div class="gstrip"></div>
@@ -415,7 +415,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="sumr"><span class="slbl">Name</span><span class="sval" id="pName">&mdash;</span></div>
   <div class="sumr"><span class="slbl">Guest of</span><span class="sval" id="pGuest">&mdash;</span></div>
   <div class="sumr"><span class="slbl">Phone</span><span class="sval" id="pPhone">&mdash;</span></div>
-  <div class="sumr"><span class="slbl">Qty / Yards</span><span class="sval" id="pQty">&mdash;</span></div>
+  <div class="sumr"><span class="slbl">Access Passes</span><span class="sval" id="pQty">&mdash;</span></div>
   <div class="sumr stot"><span class="slbl">Amount Due</span><span class="sval" id="pAmt">&mdash;</span></div>
 </div>
 <div class="bankbox">
@@ -432,7 +432,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 <div class="pay-instr">
   <p><strong>&#128179; How to pay:</strong><br>
   1. System generates a unique booking reference<br>
-  2. Open Demo Payment Channel or your bank app and transfer<br>
+  2. Demo Guestn Demo Payment Channel or your bank app and transfer<br>
   3. Reference is used to match the booking record<br>
   4. Payment status can be reviewed by the admin team</p>
 </div>
@@ -444,9 +444,9 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 </div>
 <button class="confbtn" type="button" onclick="doAsoWA()">
   <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  I Have Paid &mdash; Notify Family on WhatsApp
+  I Have Paid &mdash; Notify Admin on WhatsApp
 </button>
-<div class="blnk"><button type="button" onclick="sv('vEvent Access')">&larr; Edit booking</button></div>
+<div class="blnk"><button type="button" onclick="sv('vEventAccess')">&larr; Edit booking</button></div>
   </div>
   <div class="gstrip"></div>
 </div>
@@ -471,8 +471,8 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
   <div class="ssr-step"><div class="ssr-num">2</div><div class="ssr-text"><strong>Screenshot the payment page</strong> you just came from showing your name and reference.</div></div>
   <div class="ssr-step"><div class="ssr-num">3</div><div class="ssr-text"><strong>Send BOTH to WhatsApp <span style="color:#f5e199">00000000000</span></strong> &mdash; this is how your payment gets confirmed.</div></div>
 </div>
-<p class="helpnote">Your booking is already saved. The family will confirm once screenshots are received.<br>Call / WhatsApp <strong>00000000000</strong> for help.</p>
-<button class="againbtn-g" type="button" onclick="resetEvent Access()">Create Another Booking &#8634;</button>
+<p class="helpnote">Your booking is already saved. The admin team will confirm once screenshots are received.<br>Call / WhatsApp <strong>00000000000</strong> for help.</p>
+<button class="againbtn-g" type="button" onclick="resetEventAccess()">Create Another Booking &#8634;</button>
   </div>
 </div>
 </div>
@@ -505,7 +505,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
           <option value="Media Partners">Media Partners</option>
           <option value="Production Team">Production Team</option>
           <option value="Premium Guests">Premium Guests</option>
-          <option value="Operations Team">Operations Team</option>
+          <option value="Demo Guestrations Team">Demo Guestrations Team</option>
           <option value="Vendor Coordination">Vendor Coordination</option>
           <option value="General Guests">General Guests</option>
           <option value="Logistics Team">Logistics Team</option>
@@ -548,7 +548,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 <div class="modal-detail">
   <div class="modal-row"><span class="ml">Guest of</span><span class="mv" id="mGuest"></span></div>
   <div class="modal-row"><span class="ml">Phone</span><span class="mv" id="mPhone"></span></div>
-  <div class="modal-row"><span class="ml">Qty / Yards</span><span class="mv" id="mQty"></span></div>
+  <div class="modal-row"><span class="ml">Access Passes</span><span class="mv" id="mQty"></span></div>
   <div class="modal-row"><span class="ml">Amount</span><span class="mv" id="mAmt"></span></div>
 </div>
 <div class="modal-btns">
@@ -562,7 +562,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 <div class="alwrap">
   <div class="alico">&#128272;</div>
   <div class="altitle">Admin Access</div>
-  <div class="alsub">Demo Family &mdash; Event Dashboard<br>All data loads from Google Sheets</div>
+  <div class="alsub">Demo Demo Event Dashboard<br>Demo dashboard uses sample data only</div>
   <div class="alerr" id="alErr">Wrong password. Try again.</div>
   <input type="password" class="alinp" id="alPwd" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" onkeydown="if(event.key==='Enter')alLogin()" />
   <button class="albtn" type="button" onclick="alLogin()">Enter Dashboard</button>
@@ -577,8 +577,8 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 <div class="sc"><div class="scnum" id="sTotAso">0</div><div class="sclbl">Access Bookings</div></div>
 <div class="sc"><div class="scnum" id="sConf">0</div><div class="sclbl">Confirmed Paid</div></div>
 <div class="sc"><div class="scnum" id="sPend">0</div><div class="sclbl">Pending</div></div>
-<div class="sc"><div class="scnum" id="sYards">0</div><div class="sclbl">Passes Issued</div></div>
-<div class="sc"><div class="scnum" id="sRev">&#8358;0k</div><div class="sclbl">Revenue In</div></div>
+<div class="sc"><div class="scnum" id="sYards">0</div><div class="sclbl">Access Passes</div></div>
+<div class="sc"><div class="scnum" id="sRev">$0</div><div class="sclbl">Revenue</div></div>
 <div class="sc sc-gr"><div class="scnum" id="sTotRSVP">0</div><div class="sclbl">RSVPs Total</div></div>
 <div class="sc sc-gr"><div class="scnum" id="sYes">0</div><div class="sclbl">Yes</div></div>
 <div class="sc sc-gr"><div class="scnum" id="sMaybe">0</div><div class="sclbl">Maybe</div></div>
@@ -591,7 +591,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
       <option>Executive Guests</option><option>VIP Guests</option>
       <option>Corporate Partners</option><option>Event Sponsors</option>
       <option>Media Partners</option><option>Production Team</option>
-      <option>Premium Guests</option><option>Operations Team</option>
+      <option>Premium Guests</option><option>Demo Guestrations Team</option>
       <option>Vendor Coordination</option><option>General Guests</option>
       <option>Logistics Team</option><option>Guest Relations</option>
     </select>
@@ -605,13 +605,13 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 <div class="ttab" id="tab3" onclick="switchTab('all',3)">All Bookings</div>
   </div>
   <div class="tap-hint" id="tapHint">Tap any &#9203; Pending badge to confirm a payment</div>
-  <div class="tablewrap"><div id="tableArea"><div class="nodata">Loading data from Google Sheets...</div></div></div>
+  <div class="tablewrap"><div id="tableArea"><div class="nodata">Loading data from demo dashboard...</div></div></div>
   <div class="dashbtns">
 <button class="dbtn bdark" type="button" onclick="exportAsoCSV()">&#11015; Export Bookings</button>
 <button class="dbtn bgreen" type="button" onclick="exportRsvpCSV()">&#11015; Export RSVPs</button>
 <button class="dbtn blight" type="button" onclick="loadFromSheets()">&#8635; Reload</button>
   </div>
-  <div class="synclbl swait" id="syncLbl">Data loads from Google Sheets on login</div>
+  <div class="synclbl swait" id="syncLbl">Sample data only — no real guest records</div>
   <div class="last-sync" id="lastSync"></div>
   <div class="gstrip"></div>
 </div>
@@ -619,10 +619,10 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:14px 10p
 </div>
 <script>
 const PASS='Demo2026';
-const WH='https://script.google.com/macros/s/AKfycbx3s5kyBglKKknMMs76inD0_4bm973Bbd9_2ZN_6AIEM-fct7jKPChysKlOQz9BFu9fUw/exec';
+const WH='DEMO_GOOGLE_SHEETS_ENDPOINT_DISABLED';
 const WA_NUM='2340000000000';
 const ACCT='0000000000';
-const PRICE=15000;
+const PRICE=50;
 
 const KNOWN_HOSTS=[
   'Executive Guests',
@@ -632,7 +632,7 @@ const KNOWN_HOSTS=[
   'Media Partners',
   'Production Team',
   'Premium Guests',
-  'Operations Team',
+  'Demo Guestrations Team',
   'Vendor Coordination',
   'General Guests',
   'Logistics Team',
@@ -879,7 +879,7 @@ function mkRsvpRef(n){
 function updTot(){
   const q=parseInt(document.getElementById('aQty').value,10)||0;
   document.getElementById('aQty').classList.toggle('filled',q>0);
-  document.getElementById('aTotal').textContent=q?'\u20a6'+(q*PRICE).toLocaleString():'\u20a6 \u2014';
+  document.getElementById('aTotal').textContent=q?'$'+(q*PRICE).toLocaleString():'$ \u2014';
 }
 
 /* ── ASO EBI ── */
@@ -916,7 +916,7 @@ async function goAsoEbiPay(){
   const ref=mkRef(n,g);
   const amt=q*PRICE;
   const ts=new Date().toLocaleString('en-NG');
-  const booking={name:n,guestOfCode:g,guestOfName:g,phone:p,pieces:q,yards:q*6,amount:amt,ref};
+  const booking={name:n,guestOfCode:g,guestOfName:g,phone:p,passes:q,accessType:'Gate Pass',amount:amt,ref};
 
   showLoad(true);
   try{
@@ -930,15 +930,15 @@ async function goAsoEbiPay(){
     document.getElementById('pName').textContent=n;
     document.getElementById('pGuest').textContent='Guest of '+g;
     document.getElementById('pPhone').textContent=p;
-    document.getElementById('pQty').textContent=q+' piece'+(q>1?'s':'')+' · '+(q*6)+' yards';
-    document.getElementById('pAmt').textContent='₦'+amt.toLocaleString();
+    document.getElementById('pQty').textContent=q+' pass'+(q>1?'es':'');
+    document.getElementById('pAmt').textContent='$'+amt.toLocaleString();
     document.getElementById('pRef').textContent=ref;
     const btn=document.getElementById('bnumBtn');
     btn.textContent=ACCT;
     btn.classList.remove('bnum-copied');
     sv('vPay');
   }catch(e){
-    alert('We could not save this booking right now. Please try again. If it still fails, the website connection to Google Sheets needs attention.');
+    alert('We could not save this booking right now. Please check the required fields and try again.');
   }finally{
     showLoad(false);
   }
@@ -946,7 +946,7 @@ async function goAsoEbiPay(){
 function copyAcct(){
   const btn=document.getElementById('bnumBtn');
   navigator.clipboard.writeText(ACCT).then(()=>{
-    btn.textContent='✓ Copied! Open your bank app now';
+    btn.textContent='✓ Copied! Demo Guestn your bank app now';
     btn.classList.add('bnum-copied');
     setTimeout(()=>{
       btn.textContent=ACCT;
@@ -960,8 +960,8 @@ function copyAcct(){
 function showAsoSucc(){
   if(!STATE.curAso) return;
   document.getElementById('aSuccMsg').textContent =
-    'Thank you '+STATE.curAso.name+'! Your aso ebi booking for '+STATE.curAso.qty+' piece'+
-    (STATE.curAso.qty>1?'s':'')+' (₦'+STATE.curAso.amount.toLocaleString()+') has been saved. Please send your 2 screenshots to confirm payment.';
+    'Thank you '+STATE.curAso.name+'! Your event access booking for '+STATE.curAso.qty+' piece'+
+    (STATE.curAso.qty>1?'s':'')+' ($'+STATE.curAso.amount.toLocaleString()+') has been saved. Please send your 2 screenshots to confirm payment.';
   document.getElementById('aSuccRef').textContent = STATE.curAso.ref;
   sv('vAsoSucc');
 }
@@ -973,8 +973,8 @@ async function doAsoWA(){
     'Name: '+b.name+'\n'+
     'Guest of: '+b.guest+'\n'+
     'Phone: '+b.phone+'\n'+
-    'Qty: '+b.qty+' piece'+(b.qty>1?'s':'')+' · '+(b.qty*6)+' yards\n'+
-    'Amount: ₦'+b.amount.toLocaleString()+'\n'+
+    'Access Passes: '+b.qty+' pass'+(b.qty>1?'es':'')+'\n'+
+    'Amount: $'+b.amount.toLocaleString()+'\n'+
     'Ref: '+b.ref+'\n\n'+
     'Transfer is done. I will send my payment screenshot now. Thank you.'
   );
@@ -985,7 +985,7 @@ function doAsoConf(){
   if(!STATE.curAso) return;
   showAsoSucc();
 }
-function resetEvent Access(){
+function resetEventAccess(){
   STATE.curAso = null;
   ['aName','aPhone'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('aGuest').value='';
@@ -993,7 +993,7 @@ function resetEvent Access(){
   document.getElementById('aGuestErr').style.display='none';
   document.getElementById('aQty').value='';
   document.getElementById('aQty').classList.remove('filled');
-  document.getElementById('aTotal').textContent='₦ —';
+  document.getElementById('aTotal').textContent='$ —';
   sv('vLanding');
 }
 
@@ -1051,7 +1051,7 @@ async function submitRSVP(){
     document.getElementById('rTributeDisplay').textContent=tribute?'“'+tribute+'” — '+n:'';
     sv('vRSVPSucc');
   }catch(e){
-    alert('We could not save your RSVP right now. Please try again. If it still fails, the website connection to Google Sheets needs attention.');
+    alert('We could not save your RSVP right now. Please check the required fields and try again.');
   }finally{
     showLoad(false);
   }
@@ -1066,7 +1066,7 @@ function resetRSVP(){
 
 /* ── LOAD FROM SHEETS ── */
 async function loadFromSheets(){
-  updateSyncLabel('⏳ Loading from Google Sheets...','swait');
+  updateSyncLabel('⏳ Loading from demo dashboard...','swait');
   showLoad(true);
   try{
     const [pendingRows, confirmedRows, rsvpRows] = await Promise.all([
@@ -1079,8 +1079,8 @@ async function loadFromSheets(){
     function pushAso(row, forcedStatus){
       const ref=rowText(row,['Reference','Ref','ref','Booking Reference']);
       if(!ref || ref==='undefined') return;
-      const qty=rowNum(row,['Pieces','Qty','qty','Quantity']);
-      const amountRaw=rowNum(row,['Amount','Amount (N)','amount','Total','Total Amount']);
+      const qty=rowNum(row,['Passes','Qty','qty','Quantity']);
+      const amountRaw=rowNum(row,['Amount','Amount (USD)','amount','Total','Total Amount']);
       const booking={
         name:rowText(row,['Name','name','Full Name']),
         guest:rowText(row,['Guest Of','GuestOf','Guest of','Guest','guest','Invited By','Invited by']) || guestFromRef(ref),
@@ -1139,7 +1139,7 @@ async function loadFromSheets(){
       });
 
     refreshAdmin();
-    updateSyncLabel('✓ Loaded '+STATE.asoBookings.length+' bookings + '+STATE.rsvpList.length+' RSVPs from Google Sheets','sok');
+    updateSyncLabel('✓ Loaded '+STATE.asoBookings.length+' bookings + '+STATE.rsvpList.length+' RSVPs from demo dashboard','sok');
     setLastSync('Last loaded: '+new Date().toLocaleTimeString('en-NG'));
   }catch(e){
     updateSyncLabel('⚠ Could not load from Sheets. Check internet connection.','serr');
@@ -1178,7 +1178,7 @@ function refreshAdmin(){
   document.getElementById('sConf').textContent=conf.length;
   document.getElementById('sPend').textContent=pend.length;
   document.getElementById('sYards').textContent=conf.reduce((s,b)=>s+(Number(b.qty)||0)*6,0);
-  document.getElementById('sRev').textContent='₦'+(conf.reduce((s,b)=>s+(Number(b.amount)||0),0)/1000).toFixed(0)+'k';
+  document.getElementById('sRev').textContent='$'+(conf.reduce((s,b)=>s+(Number(b.amount)||0),0)/1000).toFixed(0)+'k';
   document.getElementById('sTotRSVP').textContent=STATE.rsvpList.length;
   document.getElementById('sYes').textContent=yes.length;
   document.getElementById('sMaybe').textContent=maybe.length;
@@ -1222,7 +1222,7 @@ function renderTable(){
 
   if(STATE.cTab==='rsvp'){
     if(!STATE.rsvpList.length){
-      area.innerHTML='<div class="nodata">No RSVPs in Google Sheets yet.</div>';
+      area.innerHTML='<div class="nodata">No RSVPs in demo dashboard yet.</div>';
       return;
     }
     const rows=STATE.rsvpList.map((r,i)=>
@@ -1277,7 +1277,7 @@ function renderTable(){
       '<td style="font-size:10px">'+escapeHtml(b.guest || '—')+'</td>'+
       '<td>'+escapeHtml(b.phone || '—')+'</td>'+
       '<td>'+(Number(b.qty)||0)+'pc·'+((Number(b.qty)||0)*6)+'yds</td>'+
-      '<td>₦'+(Number(b.amount)||0).toLocaleString()+'</td>'+
+      '<td>$'+(Number(b.amount)||0).toLocaleString()+'</td>'+
       '<td style="font-size:9px;color:#0c1f6b">'+escapeHtml(b.ref)+'</td>'+
       '<td style="font-size:10px;color:var(--muted)">'+escapeHtml(b.time || '—')+'</td>'+
       '<td>'+badge+'</td>'+
@@ -1287,7 +1287,7 @@ function renderTable(){
   area.innerHTML =
     '<div class="shdr-g">Event Access Bookings ('+data.length+')</div>'+
     '<table class="btable"><thead><tr>'+
-    '<th>#</th><th>Name</th><th>Guest Of</th><th>Phone</th><th>Qty</th><th>Amount</th><th>Ref</th><th>Date/Time</th><th>Status</th>'+
+    '<th>#</th><th>Name</th><th>Guest Of</th><th>Phone</th><th>Passes</th><th>Amount</th><th>Ref</th><th>Date/Time</th><th>Status</th>'+
     '</tr></thead><tbody>'+rows+'</tbody></table>';
 }
 
@@ -1300,8 +1300,8 @@ function openModal(idx){
   document.getElementById('mRef').textContent=b.ref;
   document.getElementById('mGuest').textContent=b.guest || '—';
   document.getElementById('mPhone').textContent=b.phone || '—';
-  document.getElementById('mQty').textContent=b.qty+' piece'+(b.qty>1?'s':'')+' · '+(b.qty*6)+' yards';
-  document.getElementById('mAmt').textContent='₦'+Number(b.amount||0).toLocaleString();
+  document.getElementById('mQty').textContent=b.qty+' pass'+(b.qty>1?'es':'');
+  document.getElementById('mAmt').textContent='$'+Number(b.amount||0).toLocaleString();
   document.getElementById('confirmModal').classList.add('show');
 }
 function closeModal(){
@@ -1322,7 +1322,7 @@ async function confirmPayment(){
     refreshAdmin();
     renderTable();
     updateSyncLabel('✓ '+b.name+' confirmed and moved to Completed · '+new Date().toLocaleTimeString('en-NG'),'sok');
-    setLastSync('Refreshing from Google Sheets...');
+    setLastSync('Refreshing from demo dashboard...');
     setTimeout(()=>{ loadFromSheets().catch(()=>{}); }, 1200);
 
     const normalized=normalizePhone(b.phone);
@@ -1333,8 +1333,8 @@ async function confirmPayment(){
     const confMsg=encodeURIComponent(
       'Dear '+b.name+',\n\n'+
       'Thank you for your payment — your Event Access booking has been confirmed! 🎉\n\n'+
-      '📦 Pieces: '+b.qty+' piece'+(b.qty>1?'s':'')+' ('+((b.qty||0)*6)+' yards)\n'+
-      '💰 Amount: ₦'+(Number(b.amount)||0).toLocaleString()+'\n'+
+      '🎟️ Access Passes: '+b.qty+' pass'+(b.qty>1?'es':'')+'\n'+
+      '💰 Amount: $'+(Number(b.amount)||0).toLocaleString()+'\n'+
       '📌 Ref: '+b.ref+'\n\n'+
       'Kindly let us know if you prefer *Pickup* or *Delivery*.\n\n'+
       'Please note that delivery will be at your own cost. Our dispatch rider will bring your fabric to your address and you pay the rider on arrival.\n\n'+
@@ -1345,7 +1345,7 @@ async function confirmPayment(){
     );
     window.open('https://wa.me/'+normalized+'?text='+confMsg,'_blank');
   }catch(e){
-    alert('Could not confirm this payment in Google Sheets. Please try again. If it still fails, the website connection to Google Sheets needs attention.');
+    alert('Could not confirm this payment in demo dashboard. Please try again. If it still fails, the website connection to demo dashboard needs attention.');
   }finally{
     showLoad(false);
   }
@@ -1354,10 +1354,10 @@ async function confirmPayment(){
 /* EXPORTS */
 function exportAsoCSV(){
   if(!STATE.asoBookings.length){
-    alert('No aso ebi bookings to export yet.');
+    alert('No event access bookings to export yet.');
     return;
   }
-  const hdr=['#','Name','Guest Of','Phone','Pieces','Yards','Amount (N)','Reference','Status','Date/Time'];
+  const hdr=['#','Name','Guest Of','Phone','Passes','Access Type','Amount (USD)','Reference','Status','Date/Time'];
   const rows=STATE.asoBookings.map((b,i)=>[
     i+1,
     `"${String(b.name||'').replace(/"/g,"'")}"`,
@@ -1407,6 +1407,205 @@ function previewEventImage(event){
   };
   reader.readAsDataURL(file);
 }
+
+
+
+/* === FINAL DEMO PASS FIX: privacy-safe, local-only, USD pricing === */
+(function(){
+  const ACCESS_PRICE = 50;
+  const DEMO_BOOKINGS = [{"name": "Demo Guest 01", "guest": "VIP Guests", "phone": "08000000001", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1001", "time": "02/09/2026, 09:07", "status": "Pending"}, {"name": "Demo Guest 02", "guest": "Corporate Guests", "phone": "08000000002", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1002", "time": "03/09/2026, 10:14", "status": "Pending"}, {"name": "Demo Guest 03", "guest": "Premium Guests", "phone": "08000000003", "qty": 3, "amount": 150, "ref": "DEMO-PASS-1003", "time": "04/09/2026, 11:21", "status": "Pending"}, {"name": "Demo Guest 04", "guest": "Guest Relations", "phone": "08000000004", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1004", "time": "05/09/2026, 12:28", "status": "Confirmed"}, {"name": "Demo Guest 05", "guest": "Operations Team", "phone": "08000000005", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1005", "time": "06/09/2026, 13:35", "status": "Pending"}, {"name": "Demo Guest 06", "guest": "Media Team", "phone": "08000000006", "qty": 4, "amount": 200, "ref": "DEMO-PASS-1006", "time": "07/09/2026, 14:42", "status": "Pending"}, {"name": "Demo Guest 07", "guest": "Sponsors", "phone": "08000000007", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1007", "time": "08/09/2026, 15:49", "status": "Pending"}, {"name": "Demo Guest 08", "guest": "Executive Guests", "phone": "08000000008", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1008", "time": "09/09/2026, 16:56", "status": "Confirmed"}, {"name": "Demo Guest 09", "guest": "VIP Guests", "phone": "08000000009", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1009", "time": "10/09/2026, 17:03", "status": "Pending"}, {"name": "Demo Guest 10", "guest": "Corporate Guests", "phone": "08000000010", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1010", "time": "11/09/2026, 08:10", "status": "Pending"}, {"name": "Demo Guest 11", "guest": "Premium Guests", "phone": "08000000011", "qty": 3, "amount": 150, "ref": "DEMO-PASS-1011", "time": "12/09/2026, 09:17", "status": "Pending"}, {"name": "Demo Guest 12", "guest": "Guest Relations", "phone": "08000000012", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1012", "time": "13/09/2026, 10:24", "status": "Confirmed"}, {"name": "Demo Guest 13", "guest": "Operations Team", "phone": "08000000013", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1013", "time": "14/09/2026, 11:31", "status": "Pending"}, {"name": "Demo Guest 14", "guest": "Media Team", "phone": "08000000014", "qty": 4, "amount": 200, "ref": "DEMO-PASS-1014", "time": "15/09/2026, 12:38", "status": "Pending"}, {"name": "Demo Guest 15", "guest": "Sponsors", "phone": "08000000015", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1015", "time": "16/09/2026, 13:45", "status": "Pending"}, {"name": "Demo Guest 16", "guest": "Executive Guests", "phone": "08000000016", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1016", "time": "17/09/2026, 14:52", "status": "Confirmed"}, {"name": "Demo Guest 17", "guest": "VIP Guests", "phone": "08000000017", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1017", "time": "18/09/2026, 15:59", "status": "Pending"}, {"name": "Demo Guest 18", "guest": "Corporate Guests", "phone": "08000000018", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1018", "time": "19/09/2026, 16:06", "status": "Pending"}, {"name": "Demo Guest 19", "guest": "Premium Guests", "phone": "08000000019", "qty": 3, "amount": 150, "ref": "DEMO-PASS-1019", "time": "20/09/2026, 17:13", "status": "Pending"}, {"name": "Demo Guest 20", "guest": "Guest Relations", "phone": "08000000020", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1020", "time": "21/09/2026, 08:20", "status": "Confirmed"}, {"name": "Demo Guest 21", "guest": "Operations Team", "phone": "08000000021", "qty": 2, "amount": 100, "ref": "DEMO-PASS-1021", "time": "22/09/2026, 09:27", "status": "Pending"}, {"name": "Demo Guest 22", "guest": "Media Team", "phone": "08000000022", "qty": 4, "amount": 200, "ref": "DEMO-PASS-1022", "time": "23/09/2026, 10:34", "status": "Pending"}, {"name": "Demo Guest 23", "guest": "Sponsors", "phone": "08000000023", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1023", "time": "24/09/2026, 11:41", "status": "Pending"}, {"name": "Demo Guest 24", "guest": "Executive Guests", "phone": "08000000024", "qty": 1, "amount": 50, "ref": "DEMO-PASS-1024", "time": "25/09/2026, 12:48", "status": "Confirmed"}];
+  const DEMO_RSVPS = [{"name": "RSVP Demo Guest 01", "phone": "08100000001", "email": "guest01@demo.com", "attend": "Yes", "host": "Premium Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2001", "time": "02/09/2026, 10:05"}, {"name": "RSVP Demo Guest 02", "phone": "08100000002", "email": "guest02@demo.com", "attend": "Yes", "host": "Guest Relations", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2002", "time": "03/09/2026, 11:10"}, {"name": "RSVP Demo Guest 03", "phone": "08100000003", "email": "guest03@demo.com", "attend": "Yes", "host": "Operations Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2003", "time": "04/09/2026, 12:15"}, {"name": "RSVP Demo Guest 04", "phone": "08100000004", "email": "guest04@demo.com", "attend": "Yes", "host": "Media Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2004", "time": "05/09/2026, 13:20"}, {"name": "RSVP Demo Guest 05", "phone": "08100000005", "email": "guest05@demo.com", "attend": "No", "host": "Sponsors", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2005", "time": "06/09/2026, 14:25"}, {"name": "RSVP Demo Guest 06", "phone": "08100000006", "email": "guest06@demo.com", "attend": "Yes", "host": "Executive Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2006", "time": "07/09/2026, 15:30"}, {"name": "RSVP Demo Guest 07", "phone": "08100000007", "email": "guest07@demo.com", "attend": "Yes", "host": "VIP Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2007", "time": "08/09/2026, 16:35"}, {"name": "RSVP Demo Guest 08", "phone": "08100000008", "email": "guest08@demo.com", "attend": "Yes", "host": "Corporate Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2008", "time": "09/09/2026, 17:40"}, {"name": "RSVP Demo Guest 09", "phone": "08100000009", "email": "guest09@demo.com", "attend": "Yes", "host": "Premium Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2009", "time": "10/09/2026, 09:45"}, {"name": "RSVP Demo Guest 10", "phone": "08100000010", "email": "guest10@demo.com", "attend": "No", "host": "Guest Relations", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2010", "time": "11/09/2026, 10:50"}, {"name": "RSVP Demo Guest 11", "phone": "08100000011", "email": "guest11@demo.com", "attend": "Yes", "host": "Operations Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2011", "time": "12/09/2026, 11:55"}, {"name": "RSVP Demo Guest 12", "phone": "08100000012", "email": "guest12@demo.com", "attend": "Yes", "host": "Media Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2012", "time": "13/09/2026, 12:00"}, {"name": "RSVP Demo Guest 13", "phone": "08100000013", "email": "guest13@demo.com", "attend": "Yes", "host": "Sponsors", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2013", "time": "14/09/2026, 13:05"}, {"name": "RSVP Demo Guest 14", "phone": "08100000014", "email": "guest14@demo.com", "attend": "Yes", "host": "Executive Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2014", "time": "15/09/2026, 14:10"}, {"name": "RSVP Demo Guest 15", "phone": "08100000015", "email": "guest15@demo.com", "attend": "No", "host": "VIP Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2015", "time": "16/09/2026, 15:15"}, {"name": "RSVP Demo Guest 16", "phone": "08100000016", "email": "guest16@demo.com", "attend": "Yes", "host": "Corporate Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2016", "time": "17/09/2026, 16:20"}, {"name": "RSVP Demo Guest 17", "phone": "08100000017", "email": "guest17@demo.com", "attend": "Yes", "host": "Premium Guests", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2017", "time": "18/09/2026, 17:25"}, {"name": "RSVP Demo Guest 18", "phone": "08100000018", "email": "guest18@demo.com", "attend": "Yes", "host": "Guest Relations", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2018", "time": "19/09/2026, 09:30"}, {"name": "RSVP Demo Guest 19", "phone": "08100000019", "email": "guest19@demo.com", "attend": "Yes", "host": "Operations Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2019", "time": "20/09/2026, 10:35"}, {"name": "RSVP Demo Guest 20", "phone": "08100000020", "email": "guest20@demo.com", "attend": "No", "host": "Media Team", "tribute": "Demo message for event coordination preview.", "ref": "DEMO-RSVP-2020", "time": "21/09/2026, 11:40"}];
+  const fmtUSD = n => '$' + Number(n || 0).toLocaleString();
+  const passText = q => Number(q || 0) + ' pass' + (Number(q || 0) === 1 ? '' : 'es');
+
+  window.apiRead = async function(sheet){
+    if(String(sheet).toLowerCase().includes('rsvp')) return DEMO_RSVPS.slice();
+    return DEMO_BOOKINGS.slice();
+  };
+
+  window.apiWrite = async function(action, payload){
+    return { ok:true, demo:true, action, payload };
+  };
+
+  window.updTot = function(){
+    const q = parseInt(document.getElementById('aQty').value, 10) || 0;
+    document.getElementById('aQty').classList.toggle('filled', q > 0);
+    document.getElementById('aTotal').textContent = q ? fmtUSD(q * ACCESS_PRICE) : '$ —';
+  };
+
+  window.goAsoEbiPay = async function(){
+    const n = document.getElementById('aName').value.trim();
+    const g = document.getElementById('aGuest').value;
+    const p = document.getElementById('aPhone').value.trim();
+    const q = parseInt(document.getElementById('aQty').value, 10);
+    const gEl = document.getElementById('aGuest');
+    const gErr = document.getElementById('aGuestErr');
+
+    if(!g){
+      gEl.classList.add('field-err');
+      gErr.style.display='block';
+      gEl.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+    gEl.classList.remove('field-err');
+    gErr.style.display='none';
+
+    if(!n || !p || !q){ alert('Please fill in your name, phone number and number of access passes.'); return; }
+    if(q < 1){ alert('Please select a valid number of access passes.'); return; }
+    if(typeof phoneLooksValid === 'function' && !phoneLooksValid(p)){ alert('Please enter a valid phone number.'); return; }
+
+    const ref = 'DEMO-PASS-' + Date.now().toString().slice(-6);
+    const amt = q * ACCESS_PRICE;
+    const ts = new Date().toLocaleString('en-US');
+    const localBooking = { name:n, guest:g, phone:p, qty:q, amount:amt, ref, status:'Pending', time:ts };
+
+    if(window.STATE){
+      STATE.curAso = localBooking;
+      STATE.asoBookings.unshift({...localBooking});
+    }
+
+    document.getElementById('pName').textContent = n;
+    document.getElementById('pGuest').textContent = 'Guest of ' + g;
+    document.getElementById('pPhone').textContent = p;
+    document.getElementById('pQty').textContent = passText(q);
+    document.getElementById('pAmt').textContent = fmtUSD(amt);
+    document.getElementById('pRef').textContent = ref;
+    const btn = document.getElementById('bnumBtn');
+    if(btn){ btn.textContent = ACCT; btn.classList.remove('bnum-copied'); }
+    sv('vPay');
+  };
+
+  window.showAsoSucc = function(){
+    if(!STATE.curAso) return;
+    document.getElementById('aSuccMsg').textContent =
+      'Thank you ' + STATE.curAso.name + '! Your event access booking for ' + passText(STATE.curAso.qty) +
+      ' (' + fmtUSD(STATE.curAso.amount) + ') has been saved. Please send your payment screenshot to confirm.';
+    document.getElementById('aSuccRef').textContent = STATE.curAso.ref;
+    sv('vAsoSucc');
+  };
+
+  window.doAsoWA = function(){
+    if(!STATE.curAso) return;
+    const b = STATE.curAso;
+    const msg = encodeURIComponent(
+      'Hello! I have made my event access payment for the Event Accessfloow Demo Event.\n\n' +
+      'Name: ' + b.name + '\n' +
+      'Guest of: ' + b.guest + '\n' +
+      'Phone: ' + b.phone + '\n' +
+      'Access Passes: ' + passText(b.qty) + '\n' +
+      'Amount: ' + fmtUSD(b.amount) + '\n' +
+      'Ref: ' + b.ref + '\n\n' +
+      'Payment is done. I will send my screenshot now. Thank you.'
+    );
+    window.open('https://wa.me/' + WA_NUM + '?text=' + msg, '_blank');
+    showAsoSucc();
+  };
+
+  window.resetEventAccess = function(){
+    STATE.curAso = null;
+    ['aName','aPhone'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('aGuest').value = '';
+    document.getElementById('aGuest').classList.remove('filled','field-err');
+    document.getElementById('aGuestErr').style.display = 'none';
+    document.getElementById('aQty').value = '';
+    document.getElementById('aQty').classList.remove('filled');
+    document.getElementById('aTotal').textContent = '$ —';
+    sv('vLanding');
+  };
+
+  window.loadFromSheets = function(){
+    STATE.asoBookings = DEMO_BOOKINGS.slice();
+    STATE.rsvpList = DEMO_RSVPS.slice();
+    const sync = document.getElementById('syncLbl');
+    if(sync){ sync.className = 'synclbl sok'; sync.textContent = 'Demo dashboard loaded with sample data only — no personal guest data.'; }
+    const last = document.getElementById('lastSync');
+    if(last) last.textContent = 'Privacy-safe demo mode';
+    if(typeof refreshAdmin === 'function') refreshAdmin();
+  };
+
+  window.refreshAdmin = function(){
+    const conf = STATE.asoBookings.filter(b => b.status === 'Confirmed');
+    const pend = STATE.asoBookings.filter(b => b.status === 'Pending');
+    const norm = v => String(v || '').trim().toLowerCase();
+    const yes = STATE.rsvpList.filter(r => norm(r.attend) === 'yes');
+    const maybe = STATE.rsvpList.filter(r => norm(r.attend) === 'maybe');
+    const no = STATE.rsvpList.filter(r => norm(r.attend) === 'no');
+    document.getElementById('sTotAso').textContent = STATE.asoBookings.length;
+    document.getElementById('sConf').textContent = conf.length;
+    document.getElementById('sPend').textContent = pend.length;
+    document.getElementById('sYards').textContent = conf.reduce((s,b)=>s+(Number(b.qty)||0),0);
+    document.getElementById('sRev').textContent = fmtUSD(conf.reduce((s,b)=>s+(Number(b.amount)||0),0));
+    document.getElementById('sTotRSVP').textContent = STATE.rsvpList.length;
+    document.getElementById('sYes').textContent = yes.length;
+    document.getElementById('sMaybe').textContent = maybe.length;
+    document.getElementById('sNo').textContent = no.length;
+    renderTable();
+  };
+
+  window.renderTable = function(){
+    const area = document.getElementById('tableArea');
+    if(STATE.cTab === 'rsvp'){
+      if(!STATE.rsvpList.length){ area.innerHTML = '<div class="nodata">No RSVPs in demo data yet.</div>'; return; }
+      const rows = STATE.rsvpList.map((r,i)=>
+        '<tr><td>'+(i+1)+'</td>'+
+        '<td><strong>'+escapeHtml(r.name)+'</strong></td>'+
+        '<td>'+escapeHtml(r.phone || '—')+'</td>'+
+        '<td>'+escapeHtml(r.email || '—')+'</td>'+
+        '<td class="srsvp">'+(r.attend==='Yes'?'<span style="color:#0a5a0a;font-weight:700">✓ Yes</span>':r.attend==='No'?'<span style="color:#8a0000;font-weight:700">✗ No</span>':escapeHtml(r.attend || '—'))+'</td>'+
+        '<td style="font-size:10px">'+escapeHtml(r.host || '—')+'</td>'+
+        '<td style="font-size:10px;color:#7a5c00;font-style:italic">'+(r.tribute ? '“'+escapeHtml(r.tribute.slice(0,35))+(r.tribute.length>35?'...”':'”') : '&mdash;')+'</td>'+
+        '<td style="font-size:9px;color:#0c1f6b">'+escapeHtml(r.ref || '—')+'</td>'+
+        '<td style="font-size:10px;color:var(--muted)">'+escapeHtml(r.time || '—')+'</td></tr>'
+      ).join('');
+      area.innerHTML = '<div class="shdr-gr">Reception RSVPs ('+STATE.rsvpList.length+')</div><table class="btable btable-gr"><thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Email</th><th>Attendance</th><th>Guest Of</th><th>Message</th><th>Ref</th><th>Date/Time</th></tr></thead><tbody>'+rows+'</tbody></table>';
+      return;
+    }
+
+    let data = [...STATE.asoBookings];
+    if(STATE.cTab === 'confirmed') data = data.filter(b=>b.status==='Confirmed');
+    if(STATE.cTab === 'pending') data = data.filter(b=>b.status==='Pending');
+    if(typeof applyAsoFilter === 'function') data = applyAsoFilter(data);
+    if(!data.length){ area.innerHTML = '<div class="nodata">No bookings found.</div>'; return; }
+    const rows = data.map((b,i)=>{
+      const idx = STATE.asoBookings.findIndex(x=>x.ref===b.ref);
+      const badge = b.status === 'Confirmed' ? '<span class="badge-confirmed">✓ Confirmed</span>' : '<span class="badge-pend" onclick="openModal('+idx+')" title="Tap to confirm">⏳ Pending ⬆</span>';
+      return '<tr><td>'+(i+1)+'</td>'+
+        '<td><strong>'+escapeHtml(b.name)+'</strong></td>'+
+        '<td style="font-size:10px">'+escapeHtml(b.guest || '—')+'</td>'+
+        '<td>'+escapeHtml(b.phone || '—')+'</td>'+
+        '<td>'+passText(b.qty)+'</td>'+
+        '<td>'+fmtUSD(b.amount)+'</td>'+
+        '<td style="font-size:9px;color:#0c1f6b">'+escapeHtml(b.ref)+'</td>'+
+        '<td style="font-size:10px;color:var(--muted)">'+escapeHtml(b.time || '—')+'</td>'+
+        '<td>'+badge+'</td></tr>';
+    }).join('');
+    area.innerHTML = '<div class="shdr-g">Event Access Bookings ('+data.length+')</div><table class="btable"><thead><tr><th>#</th><th>Name</th><th>Guest Of</th><th>Phone</th><th>Passes</th><th>Amount</th><th>Ref</th><th>Date/Time</th><th>Status</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  };
+
+  window.openModal = function(idx){
+    STATE.pendingIdx = idx;
+    const b = STATE.asoBookings[idx];
+    if(!b) return;
+    document.getElementById('mName').textContent = b.name;
+    document.getElementById('mRef').textContent = b.ref;
+    document.getElementById('mGuest').textContent = b.guest || '—';
+    document.getElementById('mPhone').textContent = b.phone || '—';
+    document.getElementById('mQty').textContent = passText(b.qty);
+    document.getElementById('mAmt').textContent = fmtUSD(b.amount);
+    document.getElementById('confirmModal').classList.add('show');
+  };
+
+  window.exportAsoCSV = function(){ alert('Demo mode: export disabled to protect personal data.'); };
+  window.exportRsvpCSV = function(){ alert('Demo mode: export disabled to protect personal data.'); };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const qtyLabel = document.querySelector('label[for="aQty"]');
+    const title = document.querySelector('.adhdr h2');
+    if(title) title.textContent = 'Demo Event Dashboard';
+    if(document.getElementById('aTotal')) document.getElementById('aTotal').textContent = '$ —';
+  });
+})();
+/* === END FINAL DEMO PASS FIX === */
 
 </script>
 </body>
